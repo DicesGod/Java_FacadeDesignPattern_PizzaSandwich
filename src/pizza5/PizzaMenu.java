@@ -1,5 +1,8 @@
 package pizza5;
 
+import sandwiches.SandwichMenu;
+import sandwiches.SandwichSize;
+import sandwiches.SandwichType;
 
 public class PizzaMenu {
 	
@@ -48,17 +51,17 @@ public class PizzaMenu {
 		return new TypedPizza(p,tp);
 }
 	
-	public static TypedPizza[] getPizzaPromo(PizzaPromotion pro) {
-		 TypedPizza[] p=new TypedPizza[2];
+	public static Object[] getPizzaPromo(PizzaPromotion pro) {
+		Object[] p=new Object[2];
 		 switch (pro) {
 			case PromoPepperoni: {
 				p[0]=getMenuPizza(TypePizza.Pepperoni,PizzaSize.large);
-				p[1]=getMenuPizza(TypePizza.House,PizzaSize.standard);
+				p[1]=SandwichMenu.getMenuSandwich(SandwichType.Cheeseburger,SandwichSize.junior);
 				break;
 			}
 			case PromoCheese: {
 				p[0]=getMenuPizza(TypePizza.Cheese,PizzaSize.large);
-				p[1]=getMenuPizza(TypePizza.House,PizzaSize.standard);
+				p[1]=SandwichMenu.getMenuSandwich(SandwichType.Cheeseburger,SandwichSize.junior);
 				break;
 			}
 			}

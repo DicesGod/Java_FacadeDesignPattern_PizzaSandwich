@@ -1,5 +1,9 @@
 package pizza5;
 
+import pizza5.PizzaMenu.TypedPizza;
+import sandwiches.*;
+import sandwiches.SandwichMenu.TypedSandwich;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -33,17 +37,17 @@ public class Main {
 		System.out.println(" Extra cheese? "+p3.getPizza().hasExtra_Cheese());
 		System.out.println(" Pepperoni? "+p3.getPizza().hasPepperoni());
 		
-		PizzaMenu.TypedPizza[]p2=PizzaMenu.getPizzaPromo(PizzaPromotion.PromoPepperoni);
+		Object[]p2=PizzaMenu.getPizzaPromo(PizzaPromotion.PromoPepperoni);
 		System.out.println("p2[0]");
-		System.out.println(" Size? "+p2[0].getPizza().getSize());
-		System.out.println(" Type = "+p2[0].getType());
-		System.out.println(" Extra cheese? "+p2[0].getPizza().hasExtra_Cheese());
-		System.out.println(" Pepperoni? "+p2[0].getPizza().hasPepperoni());
+		System.out.println(" Size? "+((TypedPizza) p2[0]).getPizza().getSize());
+		System.out.println(" Type = "+((TypedPizza) p2[0]).getType());
+		System.out.println(" Extra cheese? "+((TypedPizza) p2[0]).getPizza().hasExtra_Cheese());
+		System.out.println(" Pepperoni? "+((TypedPizza) p2[0]).getPizza().hasPepperoni());
 		System.out.println("p2[1]");
-		System.out.println(" Size? "+p2[1].getPizza().getSize());
-		System.out.println(" Type = "+p2[1].getType());
-		System.out.println(" Extra cheese? "+p2[1].getPizza().hasExtra_Cheese());
-		System.out.println(" Pepperoni? "+p2[1].getPizza().hasPepperoni());
+		System.out.println(" Size? "+((TypedSandwich) p2[1]).getSandwich().getSize());
+		System.out.println(" Type = "+((TypedSandwich) p2[1]).getType());
+		System.out.println(" Cheddar? "+((TypedSandwich) p2[1]).getSandwich().hasCheddar());
+		System.out.println(" Hambuger? "+((TypedSandwich) p2[1]).getSandwich().hasHambuger());
 
 	}
 
